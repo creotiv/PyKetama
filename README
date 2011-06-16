@@ -2,6 +2,7 @@ PyKetama - Ketama consistent hash algorithm with ELF and PJW hashing
 
 How to use:
 
+    from pyketama.ketama import Ketama
     from pyketama.hashes import hashPJW,hashELF
     
     # PJW is fester

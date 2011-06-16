@@ -1,0 +1,24 @@
+PyKetama - Ketama consistent hash algorithm with ELF and PJW hashing
+
+How to use:
+
+    from pyketama.hashes import hashPJW,hashELF
+    
+    # PJW is fester
+    # repeat_times - number of points on continium for one tower
+    # bucket       - continium length
+    
+    k = Ketama(hash_digest=h.hashPJW,repeat_times=5,bucket=1000)    
+    k.addTower('hello')
+    k.addTower('dinamo')
+    k.addTower('data')
+    k.addTower('hash')
+    k.addTower('type')
+    
+    print 'test:',k.getTower('test')
+    print 'hello:',k.getTower('indigo')
+    print 'guest:',k.getTower('guest')
+    
+
+TODO:
+    - Some tower can have collision with other. Need to fix this.
